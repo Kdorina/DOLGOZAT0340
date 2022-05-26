@@ -1,36 +1,35 @@
 
-
 <?php
 
-// echo file_get_contents('templates/head.html');
+echo file_get_contents('templates/head.html');
 
-// $page = file_get_contents('templates/szamit.html');
+$page = file_get_contents('templates/szamit.html');
 
 
 
-// function Szamitas($aTengely, $bTengely){
+function Szamitas($aTengely, $bTengely){
 
-//     $terF = (4*M_PI)/3*(pow($aTengely,2)*$bTengely);
+    $terF = (4*M_PI)/3*(pow($aTengely,2)*$bTengely);
     
 
-//     return $terF;
-// }
+    return $terF;
+}
 
-//     if(!empty($_GET['aTengely']) and !empty($_GET['bTengely'])) 
-//     {
-//         $aTengely = $_GET['aTengely'];
-//         $bTengely = $_GET['bTengely'];
+    if(!empty($_GET['aTengely']) and !empty($_GET['bTengely'])) 
+    {
+        $aTengely = $_GET['aTengely'];
+        $bTengely = $_GET['bTengely'];
 
-//         $terF= Szamitas($aTengely, $bTengely);
-//     }
-//     else{
-//         $terF = "HIBA!";
-//         }
+        $terF= Szamitas($aTengely, $bTengely);
+    }
+    else{
+        $terF = "HIBA!";
+        }
 
-//     $terF= Szamitas($aTengely, $bTengely);
+    $terF= Szamitas($aTengely, $bTengely);
 
-//     $page= str_replace('{{eredmeny}}', $terF, $page);
+    $page= str_replace('{{eredmeny}}', $terF, $page);
 
-//     echo $page;
-//     echo file_get_contents('templates/foot.html');
+    echo $page;
+    echo file_get_contents('templates/foot.html');
 ?> 
